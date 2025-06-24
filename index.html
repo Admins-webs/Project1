@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pinku 🌸</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Pinku 🌸</h1>
+  <p>Upload foto/video dengan judul, deskripsi, dan tag kamu sendiri. Cari berdasarkan tag juga bisa!</p>
+
+  <input type="file" id="fileInput" accept="image/*,video/*" />
+  <input type="text" id="title" placeholder="Judul" />
+  <textarea id="desc" placeholder="Deskripsi (opsional)"></textarea>
+  <input type="text" id="tags" placeholder="Tag (pisahkan dengan koma)" />
+  <button onclick="uploadFile()">Upload ke Pinku</button>
+
+  <hr />
+  <input type="text" id="searchTag" placeholder="Cari berdasarkan tag (contoh: aesthetic)" oninput="filterByTag()" />
+
+  <div id="status"></div>
+
+  <h2>📁 Semua File di Pinku</h2>
+  <div id="gallery"></div>
+
+  <footer style="margin-top: 50px; text-align: center; color: #64748b;">
+    <hr style="margin-bottom: 10px;" />
+    <p>© 2025 <strong>Pinku</strong> • Made with ❤️ by <strong>Atha</strong></p>
+  </footer>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-storage-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
